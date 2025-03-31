@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon GO - Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <div class="checkout-container">
+        <!-- LEFT SECTION: Item Details -->
+        <div class="left-section">
+            <h2>Pokémon GO Web Store</h2>
+            <div class="item-box">
+                <img src="https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/item_max_revive.png" alt="Max Revive">
+                <div class="item-info">
+                    <p class="item-name">Max Revive</p>
+                    <p class="price">₱59.00</p>
+                </div>
+            </div>
+            <div class="price-summary">
+                <p>Subtotal: <span>₱59.00</span></p>
+                <p class="total">Total: <span>₱59.00</span></p>
+            </div>
+        </div>
+
+        <!-- RIGHT SECTION: Payment & Billing -->
+        <div class="right-section">
+            <h3>Payment via <span id="selected-payment">UnionPay</span></h3>
+            <p class="redirect-text">You will be redirected to complete the payment.</p>
+
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <button class="pay-btn active" data-method="UnionPay">UnionPay</button>
+                <button class="pay-btn" data-method="GCash">GCash</button>
+                <button class="pay-btn" data-method="Card">Card</button>
+                <button class="pay-btn" data-method="PayPal">PayPal</button>
+            </div>
+
+            <!-- Billing Email -->
+            <label for="email">Billing Email:</label>
+            <input type="email" id="email" placeholder="Email for receipt" required>
+
+            <!-- Continue Button -->
+            <button id="continue-btn">Continue</button>
+
+            <!-- Terms & Footer -->
+            <p class="terms">
+                By proceeding, you confirm you're an adult according to your country's laws and agree to be bound by 
+                <a href="#">Xsolla's EULA</a> and <a href="#">Cookie Policy</a>.
+            </p>
+
+            <p class="footer-links">
+                <a href="#">Legal</a> • <a href="#">Refund Policy</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
