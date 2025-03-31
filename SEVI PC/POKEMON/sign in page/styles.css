@@ -278,3 +278,30 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-home-btn i {
+    font-size: 18px;
+}
+
+.back-home-btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
