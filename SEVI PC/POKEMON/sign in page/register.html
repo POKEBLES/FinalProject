@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon GO - Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="logo">
+            <img src="https://storage.googleapis.com/nianticweb-branding/niantic/niantic-horizontal-white.svg" alt="Niantic Logo">
+            <h1>Create Your Account</h1>
+        </div>
+
+        <p class="signin-text">Sign up to start your Pokémon GO journey.</p>
+
+        <form id="register-form">
+            <div class="input-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" placeholder="Re-enter your password" required>
+            </div>
+
+            <div class="input-group">
+                <label for="player-id">Player ID:</label>
+                <input type="text" id="player-id" readonly>
+            </div>
+
+            <div class="input-group">
+                <label for="ign">In-Game Name (IGN):</label>
+                <input type="text" id="ign" placeholder="Enter your in-game name" required>
+            </div>
+
+            <button type="submit" class="btn register-btn">Register</button>
+        </form>
+
+        <p class="signup-text">Already have an account? <a href="login.html">Sign in here!</a></p>
+
+        <div class="footer">
+            <p><a href="#">Terms of Service</a> · <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a></p>
+            <select class="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>
