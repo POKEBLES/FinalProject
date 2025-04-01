@@ -9,7 +9,7 @@
 }
 
 body {
-    background: rgba(0, 0, 0, 0.7);
+    background: url('/payment page/paymentpagebg.png') no-repeat center center fixed;
     display: flex;
     align-items: center;
     justify-content: center;
