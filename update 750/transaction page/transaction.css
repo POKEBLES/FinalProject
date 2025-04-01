@@ -16,12 +16,14 @@ body {
 
 
 .top-banner {
-    background: linear-gradient(to right, #fffa76, #f7aa03); /* Dark gradient */
+    background: linear-gradient(to right, #fffa76, #f7aa03);
     color: black;
     padding: 10px;
     font-weight: bold;
     text-align: center !important;
+    font-size: 20px;
 }
+
  
  .logo {
     display: flex;
@@ -78,6 +80,7 @@ body {
     margin-top: 5px;
 }
 
+
 .event-link::after {
     content: "";
     display: block;
@@ -89,26 +92,32 @@ body {
     margin-top: 5px;
 }
 
-.sign-in-link::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 5px;
-    background: #58c8f5; /* Light Blue */
-    transition: width 0.3s ease-in-out;
-    margin-top: 5px;
+.cart-link{
+    color:#f4f4f4;
 }
+
+.cart-link:hover{
+    color: #ffdd57;
+}
+
 /* Hover Underline Effect */
-.code-link:hover::after {
+.home-link:hover::after,
+.store-link:hover::after,
+.log-in-link:hover::after,
+.sign-in-link:hover::after,
+.code-link:hover::after,
+.event-link:hover::after{
+
     width: 100%;
 }
-.event-link:hover::after {
-    width: 100%;
+
+.nav-item.dropdown .my-account-link {
+    color:#f4f4f4;
 }
-.sign-in-link:hover::after {
-    width: 100%;
+
+.nav-item.dropdown .my-account-link:hover {
+    color: #ffdd57;
 }
- 
  
  .background {
     position: relative;
@@ -125,6 +134,7 @@ body {
         transform: translateY(0);
     }
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -632,7 +642,7 @@ body {
 .back-to-home-btn {
     position: absolute;
     /* Change to absolute for better positioning */
-    top: 20vh;
+    top: 23vh;
     /* Adjust as needed */
     left: 50px;
     /* Move to the left side */
