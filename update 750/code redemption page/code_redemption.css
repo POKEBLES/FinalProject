@@ -8,17 +8,18 @@
 body {
     margin: 0 !important;
     padding: 0 !important;
-    background: url('/home page/images/pokemonbgglow.png') no-repeat center center fixed;
+    background: url('/code redemption page/coderedemptionbg.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
 
 .top-banner {
-    background: linear-gradient(to right, #fffa76, #f7aa03); /* Dark gradient */
+    background: linear-gradient(to right, #fffa76, #f7aa03);
     color: black;
     padding: 10px;
     font-weight: bold;
     text-align: center !important;
+    font-size: 20px;
 }
 
 .logo {
@@ -172,7 +173,7 @@ body {
 /* Code Redemption Specific Styles */
 
 .content {
-    background: #0a121f;
+    background: linear-gradient(90deg, #154404, rgb(255, 202, 44));
     width: 80%;
     max-width: 600px;
     margin: 40px auto;
@@ -205,7 +206,7 @@ body {
 
 .input-container input[type="text"] {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     width: 70%;
     margin-right: 10px;
@@ -227,7 +228,7 @@ body {
 }
 
 .note-box {
-    background-color: #000000; /* Red background */
+    background-color: #0000002f; /* Red background */
     color: #ffffff; /* Dark red text */
     padding: 10px;
     border-radius: 5px;
