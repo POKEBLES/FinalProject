@@ -24,3 +24,4 @@ document.addEventListener("DOMContentLoaded", function() {
         alert(`Processing payment via ${selectedPayment}...`);
     });
 });
+
