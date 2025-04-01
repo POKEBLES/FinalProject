@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon GO Web Store - Profile</title>
+    <title>User Profile - Pokémon GO</title>
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script defer src="profile.js"></script>
 </head>
-<body>
 
+<body>
     <header>
         <div class="top-banner">
             % Discount for your first Web Store purchase on any item $9.99 or more!
@@ -22,66 +26,50 @@
                 </a>
             </div>
             <ul class="nav-links">
-                <li class="nav-item"><a href="/Official Homepage/official homepage.html" class="menu-a code-link">Home</a></li>
-                <li class="nav-item"><a href="/home page/homepage.html" class="menu-a code-link">Store</a></li>
-                <li class="nav-item"><a href="/cart page/cart_page.html" class="menu-a event-link">Cart</a></li>
-                <li class="nav-item"><a href="/transaction page/transactionpage.html" class="menu-a sign-in-link">Transaction</a></li>
-                <li class="nav-item"><a href="/profile page/profile.html" class="menu-a sign-in-link">My Account</a></li>
+                <li class="nav-item"><a href="/Official Homepage/official homepage.html" class="menu-a home-link">Home</a></li>
+                <li class="nav-item"><a href="/home page/homepage.html" class="menu-a store-link">Store</a></li>
+                <li class="nav-item"><a href="/transaction page/transactionpage.html" class="menu-a transac-link">Transaction</a></li>
+                <li class="nav-item">
+                    <a href="/cart page/cart_page.html" class="menu-a cart-link">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="menu-a profile-link dropdown-toggle" id="myAccountDropdown"
+                        data-bs-toggle="dropdown">
+                        <i class="fas fa-user fa-lg"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/profile page/profile.html" class="dropdown-item">Profile</a></li>
+                        <li><a href="#" class="dropdown-item logout-link" id="logoutButton">Log Out</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
-
-    <main class="profile-container">
-        <section class="profile-header">
-            <img src="/profile page/profilepic.png" alt="Profile Picture" class="profile-picture">
-            <h1>Trainer Name</h1>
-            <p>Level: 40</p>
-            <p>PokéCoins: 12,500</p>
-        </section>
-
-        <section class="profile-details">
-            <h2>Account Information</h2>
-            <div class="detail-item">
-                <strong>Email:</strong>
-                <span>trainer@example.com</span>
+    <main>
+        <section class="profile-container">
+            <div class="profile-header">
+                <div class="profile-image-container">
+                    <img src="/profile page/profilepicture.jpg" alt="Profile Image" class="profile-image">
+                </div>
             </div>
-            <div class="detail-item">
-                <strong>Trainer Code:</strong>
-                <span>1234 5678 9012</span>
+            <div class="profile-body">
+                <h3 class="profile-name">UserName</h3>
+                <p class="profile-info">Joined April, 2025 | Manila, Philippines</p>
+                <div class="stats-container">
+                    <div>
+                        <p>Hello, Pokebles!</p>
+                    </div>
+                    <div>
+                        <p>Age: 20</p>
+                    </div>
+                </div>
+                <p class="profile-email"><b>Email Address:</b> pokebles@gmail.com</p>
+                <p class="profile-phone"><b>Player ID No: </b>2134-1466-6923</p>
             </div>
-            <div class="detail-item">
-                <strong>Join Date:</strong>
-                <span>January 1, 2023</span>
-            </div>
-        </section>
-
-        <section class="profile-history">
-            <h2>Purchase History</h2>
-            <div class="history-item">
-                <span>Pokémon GO Fest 2024 Ticket</span>
-                <span>$29.99</span>
-                <span>July 15, 2024</span>
-            </div>
-            <div class="history-item">
-                <span>Max Potion x10</span>
-                <span>$9.99</span>
-                <span>June 30, 2024</span>
-            </div>
-            <div class="history-item">
-                <span>Incense x3</span>
-                <span>$4.99</span>
-                <span>June 15, 2024</span>
-            </div>
-        </section>
-
-        <section class="profile-settings">
-            <h2>Settings</h2>
-            <button class="settings-button">Change Password</button>
-            <button class="settings-button">Edit Profile</button>
-            <button class="settings-button">Logout</button>
         </section>
     </main>
-
     <footer class="footer bg-dark text-white pt-4 pb-2">
         <div class="container">
             <div class="row align-items-center">
@@ -104,19 +92,19 @@
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="col-md-4 text-center">
                     <p>&copy; 2025 Pokebles. All rights reserved.</p>
                     <p>For educational purposes only. Images and assets are owned by Niantic.</p>
                 </div>
-
+    
                 <div class="col-md-4 text-end">
                     <img src="/home page/images/pokebleslogo.png" alt="Pokebles Logo" class="footer-logo">
                 </div>
             </div>
-
+    
             <hr class="my-3 border-light opacity-50">
-
+    
             <div class="row justify-content-center">
                 <div class="col-auto">
                     <a href="" class="text-white mx-2"><i class="fab fa-facebook fa-2x"></i></a>
@@ -127,7 +115,9 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
