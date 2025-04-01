@@ -32,10 +32,20 @@
         <ul class="nav-links">
             <li class="nav-item"><a href="/Official Homepage/official homepage.html" class="menu-a code-link">Home</a></li>
             <li class="nav-item"><a href="/home page/homepage.html" class="menu-a code-link">Store</a></li>
-            <li class="nav-item"><a href="/cart page/cart_page.html" class="menu-a sign-in-link">Cart</a></li>
-            <li class="nav-item"><a href="/transaction page/transactionpage.html" class="menu-a code-link">Transaction</a></li>
-            <li class="nav-item"><a href="/profile page/profile.html" class="menu-a sign-in-link">My Account</a></li>
-
+            <li class="nav-item"><a href="/home page/homepage.html" class="menu-a code-link">Transaction</a></li>
+            <li class="nav-item">
+                <a href="/cart page/cart_page.html" class="menu-a cart-link">
+                    <i class="fas fa-shopping-cart fa-lg"></i> 
+                </a>
+            <li class="nav-item dropdown">
+                <a href="#" class="menu-a my-account-link dropdown-toggle" id="myAccountDropdown" data-bs-toggle="dropdown">
+                    <i class="fas fa-user fa-lg"></i> 
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/profile page/profile.html" class="dropdown-item">Profile</a></li>
+                    <li><a href="#" class="dropdown-item logout-link" id="logoutButton">Log Out</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>
