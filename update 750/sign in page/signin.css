@@ -2,6 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
+.pokemon-left, .pokemon-right {
+    position: absolute;
+    z-index: 10; /* Higher than the cards */
+    animation: floatAnimation 3s ease-in-out infinite; /* Smooth floating effect */
+}
+
+
+ .pokemon-left {
+    position: absolute;
+    left: -70px; /* Move more outside */
+    top: 150px; /* Adjust height */
+    width: 500px; /* Increase size */
+    rotate: -10deg;
+}
+
+.pokemon-right {
+    position: absolute;
+    right: -50px; /* Move more outside */
+    top: -5px; /* Adjust height */
+    width: 450px; /* Increase size */
+}
 /* Global Styles */
 * {
     margin: 0;
@@ -12,7 +33,7 @@
 }
 
 body {
-    background: #121212;
+    background: url('/payment page/paymentpagebg.png') no-repeat center center fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +46,6 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgba(0, 255, 159, 0.15), rgba(0, 186, 255, 0.15), rgba(255, 153, 0, 0.15));
     z-index: -1;
 }
 
