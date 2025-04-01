@@ -60,3 +60,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial total update
     updateTotal();
 });
+
