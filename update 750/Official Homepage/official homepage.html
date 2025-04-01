@@ -28,26 +28,33 @@
                 </a>
             </div>
             <ul class="nav-links">
-                <!-- Common Links for Home and Store -->
                 <li class="nav-item"><a href="/Official Homepage/official homepage.html" class="menu-a home-link">Home</a></li>
                 <li class="nav-item"><a href="/home page/homepage.html" class="menu-a store-link">Store</a></li>
     
-                <!-- Log In and Sign Up (Visible when logged out) -->
                 <div class="login-signup-links">
                     <li class="nav-item"><a href="/sign in page/loginpage.html" class="menu-a log-in-link">Log In</a></li>
                     <li class="nav-item"><a href="/sign in page/registerpage.html" class="menu-a sign-in-link">Sign Up</a></li>
                 </div>
     
-                <!-- Account Links (Visible when logged in) -->
                 <div class="account-links">
-                    <li class="nav-item"><a href="/cart page/cart_page.html" class="menu-a cart-link">Cart</a></li>
-                    <li class="nav-item"><a href="/profile page/profile.html" class="menu-a my-account-link">My Account</a></li>
-                    <li class="nav-item"><a href="/logout.html" class="menu-a logout-link">Log Out</a></li>
+                    <li class="nav-item">
+                        <a href="/cart page/cart_page.html" class="menu-a cart-link">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="menu-a my-account-link dropdown-toggle" id="myAccountDropdown" data-bs-toggle="dropdown">
+                            <i class="fas fa-user fa-lg"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile page/profile.html" class="dropdown-item">Profile</a></li>
+                            <li><a href="#" class="dropdown-item logout-link" id="logoutButton">Log Out</a></li>
+                        </ul>
+                    </li>
                 </div>
             </ul>
         </nav>
     </header>
-    
     
 
     <main class="content">
