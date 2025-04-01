@@ -10,17 +10,18 @@
 body {
     margin: 0 !important;
     padding: 0 !important;
-    background: url('/home page/images/pokemonbgglow.png') no-repeat center center fixed;
+    background: url('/event ticketing page/eventticketingbg.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
 
 .top-banner {
-    background: linear-gradient(to right, #fffa76, #f7aa03); /* Dark gradient */
+    background: linear-gradient(to right, #fffa76, #f7aa03);
     color: black;
     padding: 10px;
     font-weight: bold;
     text-align: center !important;
+    font-size: 20px;
 }
 
 .logo {
@@ -142,6 +143,7 @@ body {
     left: -70px; /* Move more outside */
     top: 150px; /* Adjust height */
     width: 500px; /* Increase size */
+    rotate: -10deg;
 }
 
 .pokemon-right {
@@ -174,7 +176,7 @@ body {
 /* Event Ticketing Specific Styles */
 
 .content {
-    background: #0a121f;
+    background: linear-gradient(90deg, #4b1e5e, rgb(255, 191, 226));
     width: 80%;
     max-width: 800px;
     margin: 40px auto;
