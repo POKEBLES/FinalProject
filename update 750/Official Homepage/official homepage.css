@@ -3,7 +3,6 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     color: white;
     background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjRicXloZTNoNTVzYWU1ZmdnZG5hbjZmem95azB0czNxYXdrdWFqcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xOrz5RVopheFruOxO7/giphy.gif");
     background-size: cover;
@@ -12,6 +11,22 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjRicXloZTNoNTVzYWU1ZmdnZG5hbjZmem95azB0czNxYXdrdWFqcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xOrz5RVopheFruOxO7/giphy.gif");
+    background-size: cover;
+    color: white;
 }
 
 .overlay {
@@ -23,7 +38,6 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 0;
 }
-
 header {
     background-color: rgb(10, 18, 31);
     border-radius: 0 0 20px 20px;
@@ -31,25 +45,36 @@ header {
     z-index: 1;
 }
 
-.top-banner {
+header .top-banner { /* increased Specificity */
     background: linear-gradient(to right, #fffa76, #f7aa03);
     color: black;
     padding: 10px;
     font-weight: bold;
-    text-align: center;
+    text-align: center !important;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.navbar1 {
+.logo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
-    height: 90px;
-}
-
-.logo img {
+ }
+ 
+ .logo img {
     width: 300px;
     margin-left: 15vh;
+ }
+
+ .navbar1 {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 15px !important; 
+    background: #0a121f;
+    height: 90px !important;
+    border-radius: 0 0 20px 20px; /* Rounded bottom only */
+    box-shadow: 0px 5px 15px rgba(150, 233, 250, 0.523); /* Soft blue glow */
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav-links {
@@ -112,24 +137,20 @@ header {
     margin-top: 5px;
 }
 
-.cart-link::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 5px;
-    background: #90f873;
-    transition: width 0.3s ease-in-out;
-    margin-top: 5px;
+.cart-link{
+    color:#f4f4f4;
 }
 
-.my-account-link::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 5px;
-    background: #d986ff;
-    transition: width 0.3s ease-in-out;
-    margin-top: 5px;
+.cart-link:hover{
+    color: #ffdd57;
+}
+
+.nav-item.dropdown .my-account-link {
+    color:#f4f4f4;
+}
+
+.nav-item.dropdown .my-account-link:hover {
+    color: #ffdd57;
 }
 
 .logout-link::after {
@@ -146,22 +167,18 @@ header {
 .store-link:hover::after,
 .sign-in-link:hover::after,
 .log-in-link:hover::after,
-.cart-link:hover::after,
-.my-account-link:hover::after,
 .logout-link:hover::after {
     width: 100%;
 }
 
-/* Hide login/signup links by default, show them after login */
 .login-signup-links {
-    display: flex; /* Show login/signup when not logged in */
+    display: flex;
 }
 
 .account-links {
-    display: none; /* Hide account-related links when not logged in */
+    display: none;
 }
 
-/* After logging in, show account links */
 body.logged-in .login-signup-links {
     display: none;
 }
