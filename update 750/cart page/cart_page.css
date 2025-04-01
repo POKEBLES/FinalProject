@@ -10,7 +10,7 @@
 body {
     margin: 0 !important;
     padding: 0 !important;
-    background: url('/home page/images/pokemonbgglow.png') no-repeat center center fixed;
+    background: url('/cart page/images/cartpagebg.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
@@ -21,6 +21,7 @@ body {
     padding: 10px;
     font-weight: bold;
     text-align: center !important;
+    font-size: 20px;
 }
 
 .logo {
@@ -65,7 +66,7 @@ body {
     transition: 0.3s all ease;
 }
 
-.code-link::after {
+.home-link::after {
     content: "";
     display: block;
     width: 0;
@@ -75,7 +76,7 @@ body {
     margin-top: 5px;
 }
 
-.event-link::after {
+.store-link::after {
     content: "";
     display: block;
     width: 0;
@@ -86,7 +87,15 @@ body {
     margin-top: 5px;
 }
 
-.sign-in-link::after {
+.cart-link{
+    color:#f4f4f4;
+}
+
+.cart-link:hover{
+    color: #ffdd57;
+}
+
+.transac-link::after {
     content: "";
     display: block;
     width: 0;
@@ -96,17 +105,20 @@ body {
     margin-top: 5px;
 }
 
-.code-link:hover::after {
+.nav-item.dropdown .profile-link {
+    color:#f4f4f4;
+}
+
+.nav-item.dropdown .profile-link:hover {
+    color: #ffdd57;
+}
+
+.home-link:hover::after,
+.store-link:hover::after,
+.transac-link:hover::after {
     width: 100%;
 }
 
-.event-link:hover::after {
-    width: 100%;
-}
-
-.sign-in-link:hover::after {
-    width: 100%;
-}
 
 .background {
     position: relative;
@@ -122,6 +134,28 @@ body {
     100% {
         transform: translateY(0);
     }
+}
+
+.pokemon-left, .pokemon-right {
+    position: absolute;
+    z-index: 10; /* Higher than the cards */
+    animation: floatAnimation 3s ease-in-out infinite; /* Smooth floating effect */
+}
+
+
+ .pokemon-left {
+    position: absolute;
+    left: -70px; /* Move more outside */
+    top: 150px; /* Adjust height */
+    width: 500px; /* Increase size */
+    rotate: -10deg;
+}
+
+.pokemon-right {
+    position: absolute;
+    right: -50px; /* Move more outside */
+    top: -5px; /* Adjust height */
+    width: 450px; /* Increase size */
 }
 /* Back to Home Button */
 .back-to-home-btn {
@@ -145,7 +179,7 @@ body {
 }
 
 .content {
-    background: linear-gradient(to right, #00343d, #824300); /* Dark gradient */
+    background: linear-gradient(to right, #ebcb14, #8c0000); /* Dark gradient */
     max-width: 700px;
     margin: 40px auto;
     padding: 30px;
