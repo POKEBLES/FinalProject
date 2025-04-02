@@ -248,12 +248,26 @@ body {
 }
 
 
-.left-btn {
-    left: 5%;
-}       
+.left-btn{
+ left:5%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .right-btn {
-    right: 5%;
+ right:5%;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Left button hover: Moves left slightly */
+.left-btn:hover {
+    transform: translateY(-50%) translateX(-5px) scale(1.1);
+    color:#ffcc00
+}
+
+/* Right button hover: Moves right slightly */
+.right-btn:hover {
+    transform: translateY(-50%) translateX(5px) scale(1.1);
+    color:#ffcc00
 }
 
 /* Carousel Cards */
@@ -339,8 +353,14 @@ body {
     gap: 5px;
  }
  
+ @keyframes shineEffect {
+    0% { background-position: -200%; }
+    100% { background-position: 200%; }
+}
+
 .price-btn {
-    background: #58c8f5;
+    background: linear-gradient(90deg, #87dbff, #6be0ff, #87dbff);
+    background-size: 200% auto;
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -348,9 +368,23 @@ body {
     font-size: 16px;
     color: #f4f4f4;
     text-decoration: none;
- }
- 
- 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: Expands, shines, and glows */
+.price-btn:hover {
+    transform: scale(5);
+    box-shadow: 0px 0px 20px rgb(0, 176, 211);
+    animation: shineEffect 1.5s infinite linear;
+    
+}
+
+/* Click effect: Slightly presses down */
+.price-btn:active {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(88, 200, 245, 1);
+}
+
 
 
 /* 🔥 Fix #2: Adjust Pokémon images */
