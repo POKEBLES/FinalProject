@@ -125,6 +125,11 @@ main {
     width: 100%;
 }
 
+@keyframes shineWave {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
 .profile-container {
     background: #232323;
     padding: 15px;
@@ -139,7 +144,24 @@ main {
     height: auto;
     margin-top: 10vh;
     margin-bottom: 15vh;
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transition for smooth effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-container:hover {
+    box-shadow: 0px 12px 45px rgba(170, 251, 241, 0.8);
+    transform: scale(1.03);
+}
+
+/* The continuous moving shine effect */
+.profile-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(251, 170, 170, 0) 30%, rgba(191, 170, 251, 0.6) 50%, rgba(170, 251, 241, 0) 70%);
+    animation: shineWave 5s infinite linear;
 }
 
 .profile-container:hover {
@@ -149,7 +171,7 @@ main {
 .profile-header {
     width: 100%;
     height: 100px;
-    background: linear-gradient(to right, #FFB444, #B2FFE2);
+    background: linear-gradient(to right, #ff4444, #2300d0);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     display: flex;
