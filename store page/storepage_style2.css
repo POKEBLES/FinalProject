@@ -639,3 +639,55 @@
 #bundlezz{
     width: 170px;
 }
+
+
+
+
+@media (max-width: 760px) {
+    /* Make navbar 1 a hamburger */
+    .nav-bar-1 {
+        display: none; /* Hide the default navbar */
+    }
+    .hamburger-menu {
+        display: block; /* Show hamburger menu */
+        position: fixed;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .hamburger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 6px 0;
+    }
+
+    .hamburger-content {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 15px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .hamburger-menu:hover .hamburger-content {
+        display: block;
+    }
+
+    /* Reduce navbar 2 size */
+    .nav-bar-2 {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for mobile */
+    .nav-bar-2 {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
