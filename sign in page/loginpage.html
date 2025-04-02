@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon GO - Register</title>
-    <link rel="stylesheet" href="registerpage.css">
-    <script defer src="script.js"></script>
+    <title>Pokémon GO - Sign In</title>
+    <link rel="stylesheet" href="loginpage.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 </head>
 <body>
     <a href="/home page/homepage.html" class="back-home-btn">
@@ -16,47 +14,37 @@
     </a>
     
     <div class="background"></div>
-    
     <div class="container">
         <div class="logo">
             <img src="https://storage.googleapis.com/nianticweb-branding/niantic/niantic-horizontal-white.svg" alt="Niantic Logo">
-            <h1>Create Your Account</h1>
+            <h1>Sign In</h1>
+        </div>
+        <p class="signin-text">Sign in with your account used in the game.</p>
+
+        <div class="buttons">
+            <button class="btn apple"><i class="fab fa-apple"></i> Sign in with Apple</button>
+            <button class="btn facebook"><i class="fab fa-facebook"></i> Sign in with Facebook</button>
+            <button class="btn google"><i class="fab fa-google"></i> Sign in with Google</button>
+            <button class="btn niantic">Sign in with Niantic Kids</button>
+            <button class="btn pokemon">Sign in with Pokémon Trainer Club</button>
         </div>
 
-        <p class="signin-text">Sign up to start your Pokémon GO journey.</p>
+        <p class="signup-text">If you don’t have a Pokémon GO account, <a href="registerpage.html">make one today!</a></p>
 
-        <form id="register-form">
-            <div class="input-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
+        <div class="promo">
+            <img src="https://signin.nianticlabs.com/assets/images/pokemongo-logo.png" alt="Pokémon GO">
+            <p>Get Up and GO!<br>Download Today</p>
+            <div class="store-buttons">
+                <a href="#"><img src="https://signin.nianticlabs.com/assets/images/badges/app-store-badge.en.png" alt="App Store"></a>
+                <a href="#"><img src="https://signin.nianticlabs.com/assets/images/badges/google-play-badge.en.png" alt="Google Play"></a>
+                <a href="#"><img src="https://signin.nianticlabs.com/assets/images/badges/galaxy-store-badge.en.png" alt="Galaxy Store"></a>
             </div>
+        </div>
 
-            <div class="input-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="Enter your password" required>
-            </div>
-
-            <div class="input-group">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" placeholder="Re-enter your password" required>
-            </div>
-
-            <div class="input-group">
-                <label for="player-id">Player ID:</label>
-                <input type="text" id="player-id" readonly>
-            </div>
-
-            <div class="input-group">
-                <label for="ign">In-Game Name (IGN):</label>
-                <input type="text" id="ign" placeholder="Enter your in-game name" required>
-            </div>
-
-            <button type="submit" class="btn register-btn">Register</button>
-        </form>
-
-        <p class="signup-text">Already have an account? <a href="loginpage.html">Sign in here!</a></p>
+        <p class="help"><a href="#">Visit our Help Center</a></p>
     </div>
 
+    
     <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-container">
@@ -97,5 +85,7 @@
             <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
