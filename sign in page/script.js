@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Registration form logic
     if (document.getElementById("register-form")) {
         document.getElementById("register-form").addEventListener("submit", function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Prevent default form submission
+
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
             let confirmPassword = document.getElementById("confirm-password").value;
