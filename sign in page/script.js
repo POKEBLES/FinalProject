@@ -33,15 +33,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (password !== confirmPassword) {
                 alert("Passwords do not match!");
-            } else if (!email.includes("@") || !email.includes(".")) { // Added more robust email validation.
+                return; // Stop further processing
+            } else if (!email.includes("@") || !email.includes(".")) {
                 alert("Enter a valid email address.");
+                return; // Stop further processing
             } else if (ign.trim() === "") {
                 alert("IGN cannot be empty.");
-            } else {
-                // Simulate successful registration and set loggedIn flag
-                localStorage.setItem("loggedIn", "true");
-                window.location.href = "https://pokebles.github.io/"; // Redirect to homepage
+                return; // Stop further processing
             }
+
+            // If all validations pass, then redirect.
+            localStorage.setItem("loggedIn", "true");
+            window.location.href = "https://pokebles.github.io/"; // Redirect to homepage
         });
     }
 
