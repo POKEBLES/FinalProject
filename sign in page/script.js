@@ -20,11 +20,17 @@ document.addEventListener("DOMContentLoaded", function() {
     if (document.getElementById("register-form")) {
         document.getElementById("register-form").addEventListener("submit", function(e) {
             e.preventDefault(); // Prevent default form submission
+            console.log("Form submission triggered.");
 
-            let email = document.getElementById("email").value.
+            let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
             let confirmPassword = document.getElementById("confirm-password").value;
             let ign = document.getElementById("ign").value;
+
+            console.log("Email:", email);
+            console.log("Password:", password);
+            console.log("Confirm Password:", confirmPassword);
+            console.log("IGN:", ign);
 
             // Validation flag
             let isValid = true;
@@ -46,10 +52,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 isValid = false;
             }
 
+            console.log("isValid:", isValid);
+
             // Redirect only if all validations pass
             if (isValid) {
                 localStorage.setItem("loggedIn", "true");
                 window.location.href = "https://pokebles.github.io/"; // Redirect to homepage
+                console.log("Redirecting to homepage.");
+            } else {
+                console.log("Validation failed. Redirect prevented.");
             }
         });
     }
