@@ -21,31 +21,36 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("register-form").addEventListener("submit", function(e) {
             e.preventDefault(); // Prevent default form submission
 
-            let email = document.getElementById("email").value;
+            let email = document.getElementById("email").value.
             let password = document.getElementById("password").value;
             let confirmPassword = document.getElementById("confirm-password").value;
             let ign = document.getElementById("ign").value;
 
+            // Validation flag
+            let isValid = true;
+
             // Check if all fields are filled
             if (!email || !password || !confirmPassword || !ign) {
                 alert("Please fill in all fields.");
-                return; // Stop further processing
+                isValid = false;
             }
 
             if (password !== confirmPassword) {
                 alert("Passwords do not match!");
-                return; // Stop further processing
+                isValid = false;
             } else if (!email.includes("@") || !email.includes(".")) {
                 alert("Enter a valid email address.");
-                return; // Stop further processing
+                isValid = false;
             } else if (ign.trim() === "") {
                 alert("IGN cannot be empty.");
-                return; // Stop further processing
+                isValid = false;
             }
 
-            // If all validations pass, then redirect.
-            localStorage.setItem("loggedIn", "true");
-            window.location.href = "https://pokebles.github.io/"; // Redirect to homepage
+            // Redirect only if all validations pass
+            if (isValid) {
+                localStorage.setItem("loggedIn", "true");
+                window.location.href = "https://pokebles.github.io/"; // Redirect to homepage
+            }
         });
     }
 
