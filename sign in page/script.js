@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let playerIdField = document.getElementById("player-id");
     if (playerIdField) {
         playerIdField.value = generatePlayerID();
+        console.log("Player ID generated:", playerIdField.value); // Add console log
     } else {
         console.error("Player ID input field not found!");
     }
