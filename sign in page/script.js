@@ -25,9 +25,15 @@ document.addEventListener("DOMContentLoaded", function() {
             let confirmPassword = document.getElementById("confirm-password").value;
             let ign = document.getElementById("ign").value;
 
+            // Check if all fields are filled
+            if (!email || !password || !confirmPassword || !ign) {
+                alert("Please fill in all fields.");
+                return; // Stop further processing
+            }
+
             if (password !== confirmPassword) {
                 alert("Passwords do not match!");
-            } else if (!email.includes("@")) {
+            } else if (!email.includes("@") || !email.includes(".")) { // Added more robust email validation.
                 alert("Enter a valid email address.");
             } else if (ign.trim() === "") {
                 alert("IGN cannot be empty.");
